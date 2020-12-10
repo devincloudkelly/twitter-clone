@@ -14,7 +14,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  # Use when a user logs out, reset the session
   def destroy
+    log_out
+    redirect_to root_url
   end
 
 end
