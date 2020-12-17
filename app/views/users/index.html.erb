@@ -4,12 +4,12 @@
 <%= will_paginate %>
 
 <ul class="users">
-    <% @users.each do |user| %>
-        <li>
-            <%= gravatar_for user, size: 50 %>
-            <%= link_to user.name, user %>
-        </li>
-    <% end %>
+<%# Everything below can be replaced with some Rails magic. %>
+    <%# <% @users.each do |user| %>
+        <%# <%= render user %>
+    <%# <% end %>
+    <%# The render below automatically iterates over the @users and renders a _user partial for each one. %>
+    <%= render @users %>
 </ul>
 
 <%= will_paginate %>
