@@ -69,13 +69,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: host }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
+  # Using a sandbox on Mailgun, so have to ensure that you add verified email addresses to test send to
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :address        => ENV['MAILGUN_SMTP_SERVER'],
-    :authentication => :plain,
     :user_name => ENV['MAILGUN_SMTP_LOGIN'],
     :password => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain => 'tranquil-basin-43437.heroku.com',
+    :domain => 'tranquil-basin-43437.herokuapp.com',
+    :authentication => :plain,
     :enable_starttls_auto => true
   }
 
