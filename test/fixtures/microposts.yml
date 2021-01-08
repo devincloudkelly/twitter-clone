@@ -26,3 +26,18 @@ micropost_<%= n %>:
   created_at: <%= 42.days.ago %>
   user: devin
 <% end %>
+
+ants: 
+  content: "adslkj eroiu as slkjwpe uia oiu fds"
+  created_at: <%= 2.years.ago %>
+  user: archer
+
+pineapple:
+  content: "wlk sleoi alsk oie jalk slie "
+  created_at: <%= 10.minutes.ago %>
+  user: user-1
+
+pizza: 
+  content: "weoi aoiaj pwe ;ijafdij woeiuaaj ifuja adsf"
+  created_at: <%= 7.months.ago %>
+  user: archer
