@@ -7,7 +7,7 @@ class User < ApplicationRecord
                                     foreign_key: "followed_id",
                                     dependent: :destroy
     has_many :following, through: :active_relationships, source: :followed
-    has_many :followers, through: :active_relationships # you don't need to add source: here as rails can properly singularize 'followers' to find the correct foreign_key
+    has_many :followers, through: :passive_relationships # you don't need to add source: here as rails can properly singularize 'followers' to find the correct foreign_key
     attr_accessor :remember_token, :activation_token, :reset_token
     before_save :downcase_email
     before_create :create_activation_digest
