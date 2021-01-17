@@ -35,7 +35,7 @@ ants:
 pineapple:
   content: "wlk sleoi alsk oie jalk slie "
   created_at: <%= 10.minutes.ago %>
-  user: user-1
+  user: user_1
 
 pizza: 
   content: "weoi aoiaj pwe ;ijafdij woeiuaaj ifuja adsf"
